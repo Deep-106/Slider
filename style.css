@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+}
+.left-slider{
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform .5s ease-in-out;
+}
+
+.left-slider > div{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    line-height: 40px;
+    text-transform: uppercase;
+}
+
+.right-slider{
+    width: 70%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 30%;
+    transition: transform .5s ease-in-out;
+}
+
+
+.img1{
+    background: url('img/pexels-jovana-nesic-593655.jpg');
+}
+.img2{
+    background: url('img/pexels-ingo-joseph-35647.jpg');
+}
+.img3{
+    background: url('img/pexels-couleur-2302908.jpg');
+}
+.img4{
+    background: url('img/pexels-adrienne-andersen-2282979.jpg');
+}
+
+.right-slider > div{
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.container .buttons button{
+    position: absolute;
+    left: 30%;
+    top: 50%;
+    z-index: 20;
+}
+
+.down{
+    transform: translateX(-100%);
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+}
+
+.up{
+    transform: translateY(-100%);
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+button{
+    background-color: white;
+    border: none;
+    color: #aaa;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 15px;
+}
+
+button:hover{
+    color: #222;
+}
+
+button:focus{
+    outline: none;
+}
